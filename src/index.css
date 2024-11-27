@@ -1,0 +1,38 @@
+:root {
+  --pal1: hwb(240 88% 0%);
+  --pal2: hwb(240 74% 0%);
+  --pal3: hwb(240 48% 2%);
+  --pal4: hwb(240 25% 5%);
+  --pal5: hwb(240 13% 12%);
+  --pal6: hwb(240 5% 27%);
+  --pal7: hwb(240 1% 42%);
+  --pal8: hwb(240 1% 53%);
+  --pal9: hwb(240 0% 76%);
+  --text-p: #5f5f5f;
+  --white: hwb(0 100% 0%);
+  --black: hwb(0 5% 95%);
+  --box-shadow: hwb(0 0% 100% / 0.1);
+  --danger: hwb(0 4% 6%);
+  --warning: rgb(255, 212, 59);
+  --success: hwb(120 5% 23%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--black);
+}
+
+p{
+  color: var(--text-p);
+}
