@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --pal1: hwb(240 88% 0%);
   --pal2: hwb(240 74% 0%);
@@ -35,4 +39,11 @@ h4 {
 
 p{
   color: var(--text-p);
+}
+
+a.active{
+  color: red;
+}
+a.active hr{
+  display: block;
 }
