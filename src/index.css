@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,8 +26,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   background-color: var(--white);
 }
@@ -37,13 +46,19 @@ h4 {
   color: var(--black);
 }
 
-p{
+p {
   color: var(--text-p);
 }
 
-a.active{
-  color: red;
+a.active {
+  color: rgb(255, 68, 0);
 }
-a.active hr{
+a.active hr {
   display: block;
+}
+@media screen and (max-width: 640px) {
+  a.active {
+    background-color: #000;
+    color: #fff;
+  }
 }
