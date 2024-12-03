@@ -5,7 +5,7 @@ import { assets } from "../assets/assets";
 
 const Products = () => {
   const { productId } = useParams();
-  const { products } = useContext(ShopContext);
+  const { products, currency } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
 
@@ -53,6 +53,22 @@ const Products = () => {
             <img className="w-5" src={assets.star_icon} alt="" />
             <img className="w-5" src={assets.star_icon} alt="" />
             <img className="w-5" src={assets.star_dull_icon} alt="" />
+            <p className="pl-2">(225)</p>
+          </div>
+          <p className="mt-5 font-medium text-2xl">
+            {currency}
+            {productData.price}
+          </p>
+          <p className="text-gray-500 mt-5 md:w-4/5">
+            {productData.description}
+          </p>
+          <div className="flex flex-col gap-4 my-8">
+            <p className="">Select Size</p>
+            <div className="flex gap-2">
+              {productData.sizes.map((size, index)=>(
+                <button key={index}>{size}</button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
