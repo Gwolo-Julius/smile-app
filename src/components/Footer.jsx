@@ -11,9 +11,12 @@ const Footer = () => {
             <img className="3-32 mb-5" src={assets.logo} alt="" />
           </Link>
           <p className="w-full md:w-2/3 text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quod
-            dicta et eos, quia neque iure autem enim unde ducimus cum vero
-            mollitia culpa totam explicabo laudantium, nihil adipisci sed.
+            An E-commerce is an online platform that facilitate the buying and
+            selling of goods to customers easily. It serves as a virtual market
+            place where businesses and individuals can showcase their products,
+            intereact with customers and conduct transactions without the need
+            for physical presence. E-commerce website have gained popularity due
+            to their convience, accessiblity and global reach they offer.
           </p>
         </div>
         <div>
@@ -33,12 +36,12 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-        <div className="w-full">
-          <hr />
-          <p className="py-5 text-sm text-center">
-            Copy right 2024 smile.com - All Rights Reserved
-          </p>
-        </div>
+      <div className="w-full">
+        <hr />
+        <p className="py-5 text-sm text-center">
+          Copy right 2024 smile.com - All Rights Reserved
+        </p>
+      </div>
     </>
   );
 };

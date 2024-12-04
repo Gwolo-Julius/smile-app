@@ -102,16 +102,24 @@ const Products = () => {
         <div className="flex flex-col gap-4 border p-6 text-sm text-gray-400">
           <p>
             An E-commerce is an online platform that facilitate the buying and
-            selling of goods to customers easily
+            selling of goods to customers easily. It serves as a virtual market
+            place where businesses and individuals can showcase their products,
+            intereact with customers and conduct transactions without the need
+            for physical presence. E-commerce website have gained popularity due
+            to their convience, accessiblity and global reach they offer.
           </p>
           <p>
             E-Commerce typically displays products or along with detailed
             Description including prices for customers to select what they are
-            interested to buy
+            interested to buy without worrying of spending on transportation,
+            and stress during the process of the transaction.
           </p>
         </div>
       </div>
-      <RelatedProducts category={productData.category} subCategory={productData.subCategory}/>
+      <RelatedProducts
+        category={productData.category}
+        subCategory={productData.subCategory}
+      />
     </div>
   ) : (
     <div className="opacity-0"></div>
