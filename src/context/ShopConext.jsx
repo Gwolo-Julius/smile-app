@@ -15,8 +15,6 @@ const ShopContextProvider = (props) => {
     if (!size) {
       toast.error("Please Select Product Size");
       return;
-    } else {
-      toast.success("Successfully added to Cart! 🎉");
     }
     let cartDate = structuredClone(cartItems);
 
@@ -32,6 +30,9 @@ const ShopContextProvider = (props) => {
     }
     setCartItems(cartDate);
   };
+  // useEffect(()=>{
+  //   console.log(cartItems)
+  // },[cartItems])
 
   const getCartCount = () => {
     let totalCount = 0;
@@ -41,11 +42,20 @@ const ShopContextProvider = (props) => {
           if (cartItems[items][item] > 0) {
             totalCount += cartItems[items][item];
           }
-        } catch (err) {}
+        } catch (error) {
+          // console.log("Add a product");
+        }
       }
     }
     return totalCount;
   };
+
+  const updateQuantity = async (itemId, size, quantity) => {
+    let cartData = structuredClone(cartItems);
+    cartData[itemId][size] = quantity;
+    setCartItems(cartData);
+  };
+  
   const value = {
     products,
     currency,
@@ -57,6 +67,8 @@ const ShopContextProvider = (props) => {
     cartItems,
     addToCart,
     getCartCount,
+    updateQuantity,
+    
   };
 
   return (

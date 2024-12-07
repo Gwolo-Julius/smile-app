@@ -38,7 +38,7 @@ const Products = () => {
                 key={index}
                 onClick={() => setImage(item)}
                 alt=""
-                border
+              
               />
             ))}
           </div>

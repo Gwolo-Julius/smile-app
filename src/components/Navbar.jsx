@@ -5,7 +5,7 @@ import { ShopContext } from "../context/ShopConext";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  const { setShowSearch } = useContext(ShopContext);
+  const { setShowSearch, getCartCount } = useContext(ShopContext);
   return (
     <div className="flex items-center  bg-white justify-between py-3 font-medium">
       <Link to="/">
@@ -58,7 +58,7 @@ const Navbar = () => {
         <Link to="/cart" className="relative">
           <img src={assets.cart_icon} className="w-5 min-w-5" alt="cart" />
           <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-orange-500 text-white aspect-square rounded-full text-[9px]">
-            16
+            {getCartCount()}
           </p>
         </Link>
         <img
