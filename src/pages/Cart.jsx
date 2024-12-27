@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopConext";
 import Title from "../components/Title";
 import { assets } from "../assets/assets";
+import CartTotal from "../components/CartTotal";
 
 const Cart = () => {
-  const { products, cartItems, currency, updateQuantity } =
+  const { products, cartItems, currency, updateQuantity,navigate } =
     useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
 
@@ -84,6 +85,18 @@ const Cart = () => {
             </div>
           );
         })}
+      </div>
+      <div className="flex justify-end my-20">
+        <div className="w-full sm:w-[450px] ">
+          <div className="p-2 border">
+            <CartTotal />
+            <hr className="w-full mt-1  border-2 ]" />
+            <div className="w-full text-end"></div>
+            <button onClick={()=>navigate('/place-order')} className="bg-orange-600 text-white py-2 px-8 mt-8 rounded hover:bg-green-500 transition-all duration-300">
+              PROCEED TO CHECKOUT
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
