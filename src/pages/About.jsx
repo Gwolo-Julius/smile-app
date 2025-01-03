@@ -43,21 +43,21 @@ const About = () => {
         <Title text1={"WHY"} text2={"CHOOSE US"} />
       </div>
       <div className="flex flex-col md:flex-row text-sm mb-20">
-        <div className="border px-10 md:px-16 sm:py-20 flex flex-col py-4 gap-5 text-center">
+        <div className="border px-10 md:px-16 sm:py-20 flex flex-col py-4 gap-5 text-center bg-gray-50">
           <b>Quality Assuarence:</b>
           <p className="text-gray-500">
             We meticulously select and vet each product to ensure it meets our
-            Stringent quality standards.{" "}
+            Stringent quality standards.
           </p>
         </div>
-        <div className="border px-10 md:px-16 sm:py-20 flex flex-col py-4 gap-5 text-center">
+        <div className="border px-10 md:px-16 sm:py-20 flex flex-col py-4 gap-5 text-center bg-gray-50">
           <b>Convenience:</b>
           <p className="text-gray-500">
             With our user-friendly interface, and hussale free ordering process,
             shopping has never been easier.
           </p>
         </div>
-        <div className="border px-10 md:px-16 sm:py-20 flex flex-col py-4 gap-5 text-center">
+        <div className="border px-10 md:px-16 sm:py-20 flex flex-col py-4 gap-5 text-center bg-gray-50">
           <b>Exceptional customer service:</b>
           <p className="text-gray-500">
             Our team of dedicated professionals is here to assist you along the
@@ -65,7 +65,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <NewsLetterBox/>
+      <NewsLetterBox />
     </div>
   );
 };
